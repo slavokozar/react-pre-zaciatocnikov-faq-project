@@ -1,25 +1,39 @@
+//src/App.js
+
 import logo from './logo.svg';
 import './App.css';
 
+import FaqItem from "./FaqItem";
+
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    function hello(){
+        console.log('Hello World od tlacitka');
+    }
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <FaqItem
+                    question="Je akademie zdarma?"
+                    answer="Akademie je zdarma pro všechny členy klubu Silicon Hill s platním základním a síťovím členstvím."
+                />
+                <FaqItem
+                    question="Co si vzít sebou?"
+                    answer="Vlastní notebook."
+                />
+
+                {/*<button onClick={hello} >Hello</button>*/}
+
+                {/*<button onClick={*/}
+                {/*    () => { console.log('Hello World od tlacitka 2'); }*/}
+                {/*}>*/}
+                {/*    Hello 2*/}
+                {/*</button>*/}
+            </header>
+        </div>
+    );
 }
 
 export default App;
